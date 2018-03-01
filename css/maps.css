@@ -1,0 +1,81 @@
+div {
+    display: block;
+}
+#map {
+    height: 600px;
+    width: 1140px;
+    margin: auto;
+    position: relative;
+    border: 1px solid #a1a1a1;
+}
+#search-input{
+    background-color: #fff;
+    padding: 0 11px 0 13px;
+    width: 300px;
+    height: 40px;
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: 300;
+    text-overflow: ellipsis;
+    display: block;
+    position: absolute;
+    left: 130px;
+    top: 6px;
+    z-index: 99;
+}
+.btn {
+    display: block;
+    float:left;
+}
+
+.dropdown-menu > li {
+    display: list-item;
+}
+.open>.dropdown-menu {
+    display: block;
+    margin-top: 33px;
+}
+#test{
+    position: relative;
+}
+#map-box {
+    background-color: white;
+    position: absolute;
+    height: 243px;
+    width: 250px;
+    top: 350px;
+    left: 21px;
+}
+.glyphicon-resize-small {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    font-family: 'Glyphicons Regular';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#close-filter{
+    height: 34px;
+    width: 255px;
+}
+#face-btn{
+    background-color: white;
+}
+.half {
+    width: 47%;
+    margin-right: 6%;
+    float: left;
+}
+#filters h6 {
+    margin: .25em 0;
+}
+.last {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+}
+
+

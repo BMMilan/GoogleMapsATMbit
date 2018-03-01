@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maps</title>
+    <link rel="stylesheet" href="../css/maps.css">
+    <script src="../script/map.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+            <img src="../pictures/logo1.png"  class="img-rounded" alt="ATM" >
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="test-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Producers
+                </button>
+                <ul class="dropdown-menu"  aria-labelledby="test-0">
+                    <li><a href="#">Genesis Coin (778)</a></li>
+                    <li><a href="#">General Bytes (599)</a></li>
+                    <li><a href="#">Lamassu (291)</a></li>
+                    <li><a href="#">Coinsource (159)</a></li>
+                    <li><a href="#">BitAccess (104)</a></li>
+                    <li><a href="#">All producers</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="test-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Countries</button>
+                <ul class="dropdown-menu" aria-labelledby="test-2">
+                    <li><a href="#">United States (1447)</a></li>
+                    <li><a href="#">Canada (364)</a></li>
+                    <li><a href="#">United Kingdrom (107)</a></li>
+                    <li><a href="#">Austria (103)</a></li>
+                    <li><a href="#">Spain (39)</a></li>
+                    <li><a href="#">All countries</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown toggle" type="button" data-toggle="dropdown" id="test-1">
+                    More
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="test-1">
+                    <li><a href="#">Find bitcoin ATM near me</a></li>
+                    <li><a href="#">Submit new ATM</a></li>
+                    <li><a href="#">Android app</a></li>
+                    <li><a href="#">iOS app</a></li>
+                    <li><a href="#">Charts</a></li>
+                    <li><a href="#">Remittance via bitcoin ATMs</a></li>
+                    <li><a href="#">ATM Profitability Calculator</a></li>
+                    <li><a href="#">Bitcoin ATM Store</a></li>
+                    <li><a href="#">Advertising</a></li>
+                </ul>
+            </div>
+            <a href="#" class="btn btn-default" role="button">Support us</a>
+            <a href="#" class="btn btn-default" role="button">Blog</a>
+            <a href="#" class="btn btn-default" role="button">Log in</a>
+    </div>
+</div>
+
+<div class="container" id="test">
+    <input id="search-input" class="controls" type="text" placeholder="Search Box">
+    <div id="map"></div>
+    <div id="map-box">
+        <div class="btn-toolbar" role="toolbar" >
+            <div class="btn-group" role="group">
+                <a href="#" title="Share link on Facebook" class="btn btn-default" id="face-btn" role="button">
+                    <img src="../pictures/facelite.jpg"  class="img-rounded" alt="ATM" height="15px"></a>
+                <a href="#" title="Share link on Twitter" class="btn btn-default" id="twitter-btn" role="button">
+                    <img src="../pictures/twitter.png"  class="img-rounded" alt="ATM" height="15px"></a>
+                <a href="#" title="Share link on Google+" class="btn btn-default" id="mail-btn" role="button">
+                    <img src="../pictures/mail.png"  class="img-rounded" alt="ATM" height="15px"></a>
+            </div>
+            <div id="close_filter" title="Close"><button type="button" class="btn btn-default btn pull-right">
+                <span class="glyphicon glyphicon-resize-small"></span></button></div>
+            </div>
+        <div id="filters" class="cleafix">
+            <div class="half">
+                <div id="atm-coins">
+                    <h6><b>Crypto:</b></h6>
+                    <label>
+                        <input type="checkbox" class="is_bitcoin" checked/>
+                        <span>Bitcoin</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" class="is_bitcoincash" checked />
+                        <span>Bitcoin Cash</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" class="is_ether" checked />
+                        <span>Ether</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" class="is_dash" checked/>
+                        <span>Dash</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" class="is_litecoin" checked/>
+                        <span>Litecoin</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" class="is_dogecoin" checked/>
+                        <span>Dogecoin</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" class="is_zcash" checked/>
+                        <span>Zcash</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" class="is_monero" checked/>
+                        <span>Monero</span>
+                    </label>
+
+                </div>
+            </div>
+            <div class="half last">
+                <div id="directions">   
+                    <h6>Direction:</h6>
+                    <label>
+                        <input type="checkbox" class="is_fiatcrypto" checked />
+                        <span>Fiat <span style="font-size: 1.3em;font-family:'Arial Unicode MS';">&rarr;</span> Crypto</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" class="is_cryptofiat" checked />
+                        <span>Crypto <span style="font-size: 1.3em;font-family:'Arial Unicode MS';">&rarr;</span> Fiat</span>
+                    </label>
+                </div>
+                <div>
+                    <h6>Location type:</h6>
+                    <label>
+                        <input type="checkbox" class="is_atm" checked />
+                        <span>ATM</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" class="is_otc" checked />
+                        <span>Teller</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" class="is_cashserv" />
+                        <span>Other </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+
+    <!--<div id="close-filter" title="Show filters"><button type="button" class="btn btn-default btn pull-right">
+        <span class="glyphicon glyphicon glyphicon-resize-full" aria-hidden="true"></span></button></div>-->
+    </div>
+
+    </div>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFfB9GIlfZrhGu-ObkQcENNNSBys-iL_E&callback=initMap">
+</script>
+</body>
+</html>
